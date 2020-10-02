@@ -1,0 +1,13 @@
+<%-include('header'); -%>
+<h1>Hello Welcome,</h1>
+
+
+<p><%=heading1 %></p>
+<% p.forEach(function(post){  %>
+  <h1><%=post.title%></h1>
+  <p>
+    <%=post.content.substring(0,100)+" ..."%></p>
+    <a href="/posts/<%=post._id%>">Read More</a>
+
+<% }); %>
+<%-include('footer'); -%>
